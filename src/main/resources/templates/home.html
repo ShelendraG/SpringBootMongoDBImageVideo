@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{layouts/default}">
+<head>
+<title>MongoDB</title>
+</head>
+<body>
+
+	<div id="page" layout:fragment="content">
+
+		<div class="container">
+			<div style="text-align: center">
+				<h4>
+					<b>Home Page</b>
+				</h4>
+			</div>
+			<div th:if="${message != null}" th:text="${message}">Message</div>
+
+			<a href="/photo/upload" class="btn btn-sm btn-primary btn-space">
+				<i class="fas fa-camera"></i> Upload New Photo
+			</a> <br /> <br /><a href="/photolist"
+				class="btn btn-sm btn-primary btn-space"><i class="fas fa-list "></i>
+				List of Photos</a>
+			<hr />
+			<a href="/video/upload" class="btn btn-sm btn-success btn-space"><i
+				class="fas fa-video"></i> Upload New Video</a><br /> <br /><a
+				href="/videolist" class="btn btn-sm btn-success btn-space"><i
+				class="fas fa-list"></i> List of Videos</a>
+			<hr />
+		</div>
+
+	</div>
+
+</body>
+</html>
